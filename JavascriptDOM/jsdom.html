@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="content" class="classContent"></p>
+    <p>Thẻ p1</p>
+    <p>Thẻ p2</p>
+    <p>Thẻ p3</p>
+    <input type="button" value="Lấy giá trị class" onclick="layGiaTriClass()" />
+    <input type="button" value="Lấy giá trị id" onclick="layGiaTri()" />
+
+    <script>
+      function layGiaTri() {
+        var theP = document.getElementById("content");
+        console.log('theP',theP)
+        theP.innerHTML = "Xin chào cyber.vn";
+        theP.style.color = "red";
+      }
+      function layGiaTriTheP2() {
+        var tatCaP = document.getElementsByTagName("p");
+        alert(
+          "Số thẻ P: " +
+            tatCaP.length +
+            ". Nội dung thẻ P: " +
+            tatCaP[2].innerHTML
+        );
+      }
+      function layGiaTriClass() {
+        var kq = document.getElementsByClassName("classContent");
+        console.log('kq',kq)
+        kq.content.innerHTML = 'Cyber đây nè';
+        kq.content.style.color = 'red';
+      }
+    </script>
+  </body>
+</html>

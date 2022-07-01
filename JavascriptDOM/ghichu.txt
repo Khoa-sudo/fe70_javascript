@@ -1,0 +1,11 @@
+Đối tượng DOM
+
+1. Đối tượng Window
+    - Là thể hiện của đối tượng cửa sổ trình duyệt
+    - Tồn tại khi mở 1 tài liệu HTML
+    - Sử dụng để truy cập thông tin của các đối tượng trên cửa sổ trình duyệt
+    -- Dùng để can thiệp vào trình duyệt
+
+2. Đối tượng Document
+    - Biểu diễn cho nội dung trang HTML đang đc hiển thị trên trình duyệt
+    - Dùng để lấy thong tin về tài liệu, các thành phần HTML và xử lý sự kiện
