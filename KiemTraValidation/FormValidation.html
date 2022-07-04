@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="form1">
+        Name: <input type="text" name="username">
+        <br>
+        <br>
+        <input type="submit" value="Kiểm tra nhập" onclick="kiemTraNhap()">
+    </form>
+<p id="thongBao"></p>
+    <script>
+function kiemTraNhap(){
+    // var inputTen = document.forms["form1"]["username"]
+    var inputTen = document.form1.username;
+    var giaTriTen = inputTen.value;
+    var theP = document.getElementById('thongBao')
+    if(giaTriTen==""){
+        theP.style.display="block"
+        theP.style.color="red"
+        theP.innerHTML="Không được bỏ trống"
+        // alert("Không được bỏ trống!")
+        return false;
+
+    }else{
+        // alert("Đăng nhập thành công")
+        theP.innerHTML="Đăng nhập thành công"
+        return true;
+    }
+}
+function allLetter(inputTag){
+    var letters = /^[A-Za-z]+$/;
+    if(inputTag.value.match(letters)){
+        alert('Hợp lệ');
+        return true;
+    }else{
+        alert('Chỉ được phép nhập các ký tự')
+        return false
+    }
+}
+    </script>
+</body>
+</html>

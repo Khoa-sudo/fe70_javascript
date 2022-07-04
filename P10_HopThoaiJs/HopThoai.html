@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="button" value="Thông báo" onclick="XuatThongBao()" />
+    <br />
+    <input type="button" value="Xác nhận" onclick="XacNhan()" />
+    <br>
+    <input type="button" value="Nhập dữ liệu" onclick="NhapDuLieu()" />
+    <script>
+      // 1. Alert Box
+      // 2. Confirm Box
+      // 3. Prompt Box
+
+      function XuatThongBao() {
+        alert("Xin chào các bạn đến với myclass.vn");
+      }
+      function XacNhan() {
+        var xacNhan;
+        xacNhan = confirm("Bạn đã đánh giá khoá học này chưa?");
+        if (xacNhan) {
+          document.write("Xin cảm ơn các bạn!");
+        } else {
+          document.write(
+            "Vui lòng click vào nút màu vàng: ĐÁNH GIÁ KHOÁ HỌC, ĐÁNH GIÁ GIẢNG VIÊN. Xin cảm ơn!"
+          );
+        }
+      }
+      function NhapDuLieu(){
+        var ten;
+        ten = prompt("Vui lòng nhập tên của bạn");
+        document.write(ten);
+      }
+    </script>
+  </body>
+</html>
