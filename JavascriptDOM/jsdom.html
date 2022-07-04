@@ -8,16 +8,15 @@
   </head>
   <body>
     <p id="content" class="classContent"></p>
-    <p>Thẻ p1</p>
-    <p>Thẻ p2</p>
-    <p>Thẻ p3</p>
+    <p class="demo">Thẻ p1</p>
+    <p class="demo">Thẻ p2</p>
+    <p class="demo">Thẻ p3</p>
     <input type="button" value="Lấy giá trị class" onclick="layGiaTriClass()" />
     <input type="button" value="Lấy giá trị id" onclick="layGiaTri()" />
 
     <script>
       function layGiaTri() {
         var theP = document.getElementById("content");
-        console.log('theP',theP)
         theP.innerHTML = "Xin chào cyber.vn";
         theP.style.color = "red";
       }
@@ -31,10 +30,13 @@
         );
       }
       function layGiaTriClass() {
-        var kq = document.getElementsByClassName("classContent");
-        console.log('kq',kq)
-        kq.content.innerHTML = 'Cyber đây nè';
-        kq.content.style.color = 'red';
+        var kq = document.getElementsByClassName("demo");
+        alert(
+          "Số class demo: " +
+            kq.length +
+            ". Nội dung class demo: " +
+            kq[2].innerHTML
+        );
       }
     </script>
   </body>

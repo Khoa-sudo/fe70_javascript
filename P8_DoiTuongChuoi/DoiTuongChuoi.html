@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Tìm vị trí chuỗi con nằm đầu -->
+    <!-- String.indexOf(str): return vị trí xuất hiện đầu tiên of string (0 begin), if not return -1 -->
+    <!-- String.lastIndexOf(str): return vị trí xuất hiện cuối cùng of string (0 begin), if not return -1 -->
+    <!-- String.search(str): tương đương với indexOf(str) -->
+
+    <script>
+      var chuoi =
+        "Hệ thống khoá học Cybersoft. Hệ thống Cybersoft chuyên về lập trình. Địa chỉ Cybersoft tại Cao Thắng Quận 3";
+
+      /* 1.Những phương thức tìm kiếm chuỗi con */
+      document.write(
+        "Vị trí xuất hiện chuỗi Cybersoft là: <b>" +
+          chuoi.indexOf("Cybersoft") +
+          "</b> <br/>"
+      );
+      document.write(
+        "Vị trí xuất hiện chuỗi Cybersoft là: <b>" +
+          chuoi.lastIndexOf("Cybersoft") +
+          "</b> <br/>"
+      );
+      document.write(
+        "Vị trí xuất hiện chuỗi Cybersoft là: <b>" +
+          chuoi.search("Cybersoft") +
+          "</b> <br/>"
+      );
+
+      /* 2.Cắt chuỗi con
+       * slice(start,end):
+       *    - Nếu tham số truyền vào là số âm thì nó sẽ tính ngược lại
+       *    - Nếu chỉ truyền start thì nó sẽ tự cắt đến v trí cuối cùng
+       * substring(start,end):
+       *    - Giống slice nhưng không được truyền vào số âm
+       * substr(start,length):
+       *    - Length truyền vào không được < 0
+       */
+
+      //  Slice
+      var chuoiSlice =
+        "Hệ thống khoá học Cybersoft. Hệ thống Cybersoft chuyên về lập trình. Địa chỉ Cybersoft tại Cao Thắng Quận 3";
+      document.write(
+        chuoiSlice.slice(chuoiSlice.indexOf("Cybersoft"), 27) + "<br/>"
+      );
+
+      var chuoiSubstr =
+        "Hệ thống khoá học Cybersoft. Hệ thống Cybersoft chuyên về lập trình. Địa chỉ Cybersoft tại Cao Thắng Quận 3";
+      document.write(chuoiSubstr.substr(18, 9));
+
+      //Tìm kiếm và thay thế
+      //replace(str_find,str_replace)
+      
+    </script>
+  </body>
+</html>
