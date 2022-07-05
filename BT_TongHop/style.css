@@ -1,0 +1,64 @@
+#container {
+  margin: 0 auto;
+  width: 600px;
+  height: 100%;
+  background: rgba(81, 226, 189, 0.93);
+}
+.tab {
+  background-color: rgb(215, 215, 106);
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 8px;
+}
+
+#dangNhap {
+  background: #e0d9d9;
+}
+.tab:hover {
+  background: #e0eeee !important;
+}
+#divDangNhap {
+  width: 500px;
+  height: 100%;
+  display: none;
+  margin-left: 50px;
+}
+#divDangKy {
+  width: 500px;
+  height: 100%;
+  margin-left: 50px;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.inputCss {
+  padding: 6px;
+  margin: 5px;
+}
+table.container__table {
+  padding: 0 16px;
+}
+
+#btn__dangKy,#btn__dangNhap {
+  padding: 10px;
+  background-color: yellow;
+  border: none;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+#btn__dangKy:hover,#btn__dangNhap:hover {
+  background-color: rgb(218, 214, 214);
+  cursor: pointer;
+}
+#pThongBao{
+  color: red;
+  padding: 20px;
+  background-color: yellow;
+  display: none;
+  margin-right: 30px;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="container">
+      <a href="#" id="dangKy" class="tab" onclick="onDangKy()">ĐĂNG KÝ</a>
+      <a href="#" id="dangNhap" class="tab" onclick="onDangNhap()">ĐĂNG NHẬP</a>
+
+      <div id="divDangKy" class="divForm">
+        <form action="trangchu.php" name="frmDangKy">
+          <h2>Đăng ký thành viên</h2>
+          <div id="thongBao">
+            <p id="pThongBao"></p>
+          </div>
+          <hr />
+          <table class="container__table">
+            <tr>
+              <td>Tên đăng nhập:</td>
+              <td><input type="text" id="tenDangNhap" class="inputCss" /></td>              
+            </tr>
+            <p id="kiemTraMax"></p>
+            <tr>
+              <td>Mật khẩu:</td>
+              <td><input type="password" id="matKhau" class="inputCss" /></td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td><input type="text" id="email" class="inputCss" /></td>
+            </tr>
+            <tr>
+              <td>Nghề nghiệp:</td>
+              <td>
+                <select id="ngheNghiep" class="drNgheNghiep inputCss">
+                  <option>Vui lòng chọn</option>
+                  <option>Lập trình viên</option>
+                  <option>Ngân hàng</option>
+                  <option>Giảng viên</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Tuổi:</td>
+              <td>
+                <input type="text" id="tuoi" class="inputCss" />
+              </td>
+            </tr>
+            <tr>
+              <td>Giới tính:</td>
+              <td>
+                <input type="radio" id="nam" name="gioiTinh" /> Nam
+                <input type="radio" id="nu" name="gioiTinh" /> Nữ
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <input
+                  type="submit"
+                  value="Đăng ký"
+                  id="btn__dangKy"
+                  onclick="return kiemTraHopLe()"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                Bạn đã có tài khoản? Vui lòng click
+                <a href="#" onclick="onDangNhap()">Đăng nhập</a>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div id="divDangNhap" class="divForm">
+        <form action="trangchu.php" name="frmDangNhap">
+          <h2>Đăng nhập thành viên</h2>
+          <hr />
+          <table class="container__table">
+            <tr>
+              <td>Tên đăng nhập:</td>
+              <td><input type="text" id="tenDangNhap" class="inputCss" /></td>
+            </tr>
+            <tr>
+              <td>Mật khẩu:</td>
+              <td><input type="text" id="matKhau" class="inputCss" /></td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <input type="checkbox" id="chxQuenMatKhau" /> Ghi nhớ lần sau
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <a href="#">Quên mật khẩu</a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                <input type="submit" value="Đăng Nhập" id="btn__dangNhap" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" style="text-align: center">
+                Bạn chưa có tài khoản?
+                <a href="#" onclick="onDangKy()">Đăng ký</a>
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+
+      <p id="thongBao"></p>
+      <p id="thongBao1"></p>
+    </div>
+
+    <script src="./validation.js"></script>
+  </body>
+</html>
